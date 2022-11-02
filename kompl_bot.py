@@ -27,7 +27,7 @@ async def command_noch():
 
 async def scheduler():
     schedule.every().day.at("09:00").do(command_utro)
-    schedule.every(3).seconds.do(command_kompl)
+    schedule.every(3).hours.do(command_kompl)
     schedule.every().day.at("23:30").do(command_noch)
     while True:
         await schedule.run_pending()
