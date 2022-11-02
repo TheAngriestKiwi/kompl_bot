@@ -9,19 +9,20 @@ import aioschedule as schedule
 # подключаемся к боту
 bot = Bot(token= kompl_token())
 dp = Dispatcher(bot)
+id = 1831835977
 
 
 #Клиентская часть
 async def command_utro():
-        await bot.send_message(chat_id= 1831835977, text= "Доброе утро, надеюсь у тебя сегодня будет отличный день!")
+        await bot.send_message(chat_id= id, text= "Доброе утро, надеюсь у тебя сегодня будет отличный день!")
 
 
 async def command_kompl():
-        await bot.send_message(chat_id= 1831835977, text= await gen())  
+        await bot.send_message(chat_id= id, text= await gen())  
 
 
 async def command_noch():
-        await bot.send_message(chat_id= 1831835977, text= "Спокойной ночи, малышка")
+        await bot.send_message(chat_id= id, text= "Спокойной ночи, малышка")
 
 
 async def scheduler():
